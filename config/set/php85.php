@@ -38,7 +38,10 @@ return static function (RectorConfig $rectorConfig): void {
             ColonAfterSwitchCaseRector::class,
             ArrayKeyExistsNullToEmptyStringRector::class,
             ChrArgModuloRector::class,
+<<<<<<< HEAD
             SleepToSerializeRector::class
+=======
+>>>>>>> bf3716bc44 ([Php85] Add ChrArgModuloRector (#7190))
         ]
     );
 
