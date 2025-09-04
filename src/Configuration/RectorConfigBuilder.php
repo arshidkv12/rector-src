@@ -31,7 +31,6 @@ use Rector\Set\Enum\SetGroup;
 use Rector\Set\SetManager;
 use Rector\Set\ValueObject\DowngradeLevelSetList;
 use Rector\Set\ValueObject\SetList;
-use Rector\Symfony\Set\SymfonyInternalSetList;
 use Rector\Symfony\Set\SymfonySetList;
 use Rector\ValueObject\Configuration\LevelOverflow;
 use Rector\ValueObject\PhpVersion;
@@ -502,18 +501,6 @@ final class RectorConfigBuilder
 
         if ($gedmo || $all) {
             $this->sets[] = DoctrineSetList::GEDMO_ANNOTATIONS_TO_ATTRIBUTES;
-        }
-
-        if ($fosRest || $all) {
-            $this->sets[] = SymfonyInternalSetList::FOS_REST_ANNOTATIONS_TO_ATTRIBUTES;
-        }
-
-        if ($jms || $all) {
-            $this->sets[] = SymfonyInternalSetList::JMS_ANNOTATIONS_TO_ATTRIBUTES;
-        }
-
-        if ($sensiolabs || $all) {
-            $this->sets[] = SymfonyInternalSetList::SENSIOLABS_ANNOTATIONS_TO_ATTRIBUTES;
         }
 
         if ($phpunit || $all) {
